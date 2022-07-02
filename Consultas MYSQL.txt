@@ -1,0 +1,26 @@
+Query #1
+////////////////////////////////////////////////////////
+SELECT 
+o.id IdOrden,
+    CONCAT(e.first_name, ' ', e.last_name) AS Empleado,
+    CONCAT(c.first_name, ' ', c.last_name) AS Cliente,
+    o.order_date as FechaOrden,
+    c.email_address as CorreoEmpleado,
+        e.email_address as CorreoCliente
+
+FROM
+    customers c
+        JOIN
+    orders o ON c.id = o.customer_id
+        JOIN
+    employees e ON o.employee_id = e.id
+WHERE
+    MONTH(o.order_date) IN (4 , 5);
+
+Query #2
+//////////////////////////////////////////////////////////
+
+SELECT sum(p.standard_cost) as SumCostoEstandar FROM 
+products p 
+join suppliers s on p.supplier_ids=s.id
+where s.id=10;

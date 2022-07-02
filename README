@@ -1,0 +1,37 @@
+ENLACE DE LA API
+
+
+/PruebaTecnica/API/service.php
+
+Metodos
+
+*Listar*
+*Agregar*
+
+
+
+Para cada consulta se manda como parametro @method el cual es el metodo que se va a utilizar
+
+
+
+Agregar
+
+----------------Parametros----------------
+@employee_id
+@customer_id
+@order_date
+@shipped_date
+@shipper_id
+@ship_name
+@ship_address
+@ship_city
+@ship_country_region
+@shipping_fee
+@taxes
+@payment_type
+@tax_rate
+@paid_date
+@status_id
+
+
+
