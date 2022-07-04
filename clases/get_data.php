@@ -51,7 +51,7 @@ class getDataClass extends ConectionDB
     }
     public function getOrders(){
         try {
-            $query = "select * from orders order by order_date desc";
+            $query = "select id,ship_name,ship_address,ship_city from orders order by order_date desc limit 5";
             $statement = $this->dbConnect->prepare($query);
             $statement->execute();
             $result = $statement->fetchAll(PDO::FETCH_ASSOC);

@@ -7,7 +7,7 @@ $set = new setDataClass();
 
 $method = $_POST["method"];
 
-switch ($opc) {
+switch ($method) {
     case 'Listar':
         $get->getOrders();
         break;
